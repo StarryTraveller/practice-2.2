@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
+
+    <script>
+      let score = JSON.parse(localStorage.getItem("renzy")) || {
+        wins: 0,
+        losses: 0,
+      };
+
+      function playGame(guess) {
+        const computerMove = pickcomputerMove();
+
+        let result = "";
+        if (guess === computerMove) {
+          result = "You win!";
+          score.wins++;
+        } else {
+          result = "You lose!";
+          score.losses++;
+        }
+
+        localStorage.setItem("renzy", JSON.stringify(score));
+
+        alert(`You picked ${guess}. The results is ${computerMove}. ${result}.
+        Wins: ${score.wins}, Losses: ${score.losses}`);
+      }
+
+      function pickcomputerMove() {
+        const randomNumber = Math.random();
+        computerMove = "";
+
+        if (randomNumber < 0.5) {
+          computerMove = "heads";
+        } else {
+          computerMove = "tails";
+        }
+
+        return computerMove;
+      }
+    </script>
+  </body>
+</html>

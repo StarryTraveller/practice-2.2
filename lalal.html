@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Variables</title>
+  </head>
+
+  <body>
+    <button onclick="activateHeadsOrTails('heads');">heads</button>
+    <button onclick="activateHeadsOrTails('tails');">tails</button>
+    <p class="displayMessage"></p>
+
+    <input class="js-input-name" onkeydown="onPressKey(event)" />
+    <button onclick="yourName();">Submit</button>
+    <p class="js-display-name"></p>
+
+    <script>
+      function onPressKey(event) {
+        if (event.key === "Enter") {
+          yourName();
+        }
+      }
+      function yourName() {
+        let name = document.querySelector(".js-input-name").value;
+        document.querySelector(
+          ".js-display-name"
+        ).innerHTML = `Your name is: ${name}`;
+      }
+
+      function activateHeadsOrTails(choice) {
+        document.querySelector(
+          ".displayMessage"
+        ).innerHTML = `You chose: ${choice}`;
+      }
+    </script>
+  </body>
+</html>
