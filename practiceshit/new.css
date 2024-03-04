@@ -1,0 +1,12 @@
+.all-button {
+  background-color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.is-toggled {
+  background-color: lightgray;
+  color: black;
+}
