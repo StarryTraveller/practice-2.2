@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrays and Loops</title>
+    <link rel="stylesheet" href="11-todo-list.css" />
   </head>
   <body>
     <p>Todo List</p>
-    <input class="js-name-input" placeholder="Todo name" />
-    <button onclick="addToDo();">Add</button>
-    <p class=""></p>
+    <div class="todo-input-grid">
+      <input class="js-name-input name-input" placeholder="Todo name" />
+      <input class="js-due-date-input date-input" type="date" />
+      <button class="add-todo-button" onclick="addToDo();">Add</button>
+    </div>
+    <div class="js-todo-list todo-grid"></div>
     <script src="11-todo-list.js"></script>
   </body>
 </html>

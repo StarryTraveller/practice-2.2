@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <p>renzy</p>
+
+    <script>
+      /*
+        const arr = [1, 2, 3, 4, 5];
+        for (i = 0; i < arr.length; i++) {
+          let lastIndex = arr.length - 1;
+
+          let firstValue = arr[0];
+          let lastValue = arr[lastIndex];
+
+          arr[0] = lastValue;
+          arr[lastIndex] = firstValue;
+        }
+        console.log(arr);
+
+        */
+
+      const array1 = [1, 2, 3];
+      const array2 = array1;
+
+      array2.push(4);
+
+      function removeEgg(foods) {
+        let array = [];
+        let egg = 0;
+        let foods1 = foods.reverse();
+        for (i = 0; i < foods1.length; i++) {
+          let a = foods1[i];
+
+          if (a === "egg" && egg < 2) {
+            egg += 1;
+            continue;
+          }
+          array.push(a);
+        }
+
+        return array;
+      }
+
+      console.log(removeEgg(["egg", "renezy", "egg", "renzy", "egg"]));
+
+      /*let a = ["egg", "renezy", "egg", "renzy", "egg"];
+        let b = a;
+
+        for (i = 1; i < 31; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+          } else if (i % 5 === 0) {
+            console.log("Buzz");
+          } else {
+            console.log(i);
+          }
+        }
+        */
+    </script>
+  </body>
+</html>

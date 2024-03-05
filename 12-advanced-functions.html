@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="lastDance();"></button>
+    <script>
+      /*
+       function greeting() {
+         console.log("hello");
+       }
+       greeting();
+
+       const function1 = function greeting() {
+         console.log("hello2");
+       };
+       console.log(function1);
+       console.log(typeof function1);
+       */
+
+      setTimeout(function () {
+        //   console.log("timeout");
+      }, 3000);
+
+      // console.log("next line");
+
+      /* setInterval(function () {
+         console.log("interval");
+       }, 3000);
+       */
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(function (
+        value,
+        index
+      ) {
+        if (value === "wash dishes") {
+          return;
+        }
+
+        console.log(index);
+        console.log(value);
+      });
+
+      const add = function () {
+        console.log(2 + 3);
+      };
+
+      add();
+      add();
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+
+      runTwice(function () {
+        console.log("12b");
+      });
+
+      runTwice(add);
+    </script>
+  </body>
+</html>
